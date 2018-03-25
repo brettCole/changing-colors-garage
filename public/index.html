@@ -6,9 +6,10 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/rotating-card.css" rel="stylesheet" />
     <link href="./assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
     <meta name="theme-color" content="#000000">
     <!--
@@ -28,7 +29,7 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body className = "sidebar-collapse">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
@@ -68,6 +69,16 @@
                 scrollTop: $('.section-download').offset().top
             }, 1000);
         }
+
+        function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
       }
     </script>
   </body>
