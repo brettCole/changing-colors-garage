@@ -1,43 +1,77 @@
 import React, { Component } from 'react';
 import Logo from './Logo';
+import { NavLink } from 'react-router-dom';
 
 class TopNavigation extends Component {
   render() {
     return (
-      <nav className = "navbar navbar-expand-lg bg-default fixed-top" color-on-scroll = "500">
+      <nav className = "navbar navbar-expand-lg bg-white fixed-top navbar-transparent" color-on-scroll = "500">
         <div className = "container">
+          <div className = "dropdown button-dropdown">
+            <a href = "#" className = "dropdown-toggle" id = "navbarDropdown" data-toggle = "dropdown" aria-expanded = "false">
+              <span className = "button-bar"></span>
+              <span className = "button-bar"></span>
+              <span className = "button-bar"></span>
+            </a>
+            <div className = "dropdown-menu" aria-labelledby = "navbarDropdown">
+              <a className = "dropdown-item" href = "#">Repairs</a>
+              <a className = "dropdown-item" href = "#">Schedule</a>
+              <a className = "dropdown-item" href = "#">Location</a>
+              <a className = "dropdown-item" href = "#">About Us</a>
+              <a className = "dropdown-item" href = "#">Testimonials</a>
+            </div>
+          </div>
           <div className = "navbar-translate col-4">
             <a className = "navbar-brand pt-0 pb-0" href="#">
               <Logo className = "w-100" />
             </a>
             <button className = "navbar-toggler navbar-toggler-right" type = "button" data-toggle = "collapse" data-target = "#navigation" aria-controls = "navigation-index" aria-expanded = "false" aria-label = "Toggle navigation">
-              <span class="navbar-toggler-bar bar1"></span>
-	            <span class="navbar-toggler-bar bar2"></span>
-	            <span class="navbar-toggler-bar bar3"></span>
+              <span className="navbar-toggler-bar bar1"></span>
+	            <span className="navbar-toggler-bar bar2"></span>
+	            <span className="navbar-toggler-bar bar3"></span>
             </button>
           </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation">
-    	      <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
+          <div className="collapse navbar-collapse justify-content-end" id="navigation">
+    	      <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink
+                  to="/repairs"
+                  className="nav-link"
+                >
                   Repairs
-                </a>
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">Schedule</a>
+              <li className="nav-item">
+                <NavLink
+                  to="/schedule-appointment"
+                  className="nav-link"
+                >
+                  Schedule
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">Location</a>
+              <li className="nav-item">
+                <NavLink 
+                  to="/location" 
+                  className="nav-link"
+                >
+                  Location
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
+              <li className="nav-item">
+                <NavLink 
+                  to="/aboutus" 
+                  className="nav-link"
+                >
                   About Us
-                </a>
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
+              <li className="nav-item">
+                <NavLink 
+                  to="/testimonials" 
+                  className="nav-link"
+                >
                   Testimonials
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
