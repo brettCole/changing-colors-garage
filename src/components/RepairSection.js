@@ -1,5 +1,4 @@
 import React from 'react';
-import RepairRotateItem from './RepairRotateItem';
 
 const RepairSection = () => {
   return (
@@ -10,12 +9,11 @@ const RepairSection = () => {
             You have a problem? We can fix it!
           </h2>
           <h4 className="description">
-            There isn't much we can't do. We work hard to offer all the services that your vehicle may need. This list isn't exhaustive but represents some of the services we offer.
+            There isn't much we can't do. We work hard to offer all the services that your vehicle needs. This list isn't exhaustive but represents some of the services we offer.
           </h4>
         </div>
       </div>
       <div className="row">
-          <RepairRotateItem />
           <div className="card card-background card-raised">
             <div className="info">
               <div className="icon icon-white">
